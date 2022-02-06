@@ -49,7 +49,6 @@ function DashBoardInfos({}) {
 
   return (
     <InfoContainer>
-      {console.log(unitsActive.length)}
       <div>
         <p>Total Unidades</p>
         <span>{totalUnits}</span>

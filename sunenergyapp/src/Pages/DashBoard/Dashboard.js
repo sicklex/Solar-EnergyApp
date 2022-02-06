@@ -15,7 +15,6 @@ import {
 
 import { Line } from "react-chartjs-2";
 import DashBoardInfos from "../../Components/DashBoardInfos/DashBoardInfos";
-import { object } from "yup";
 
 const MONTHOPTIONS = [
   {
