@@ -9,6 +9,15 @@ export const Container = styled.div`
   margin: 0 auto;
   background-color: #f5f5f5;
   height: 100vh;
+
+  @media (max-width: 1026px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: 506px) {
+    background-color: white;
+  }
 `;
 
 export const MainImg = styled.div`
@@ -18,6 +27,10 @@ export const MainImg = styled.div`
   background-repeat: no-repeat;
   min-width: 50%;
   opacity: 0.8;
+
+  @media (max-width: 1026px) {
+    background-image: none;
+  }
 `;
 
 export const LoginContainer = styled.div`
