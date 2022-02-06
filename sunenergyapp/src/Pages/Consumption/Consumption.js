@@ -27,7 +27,14 @@ function Consumption() {
     getGetUnityGenerations();
   }, [date]);
 
-  function handleSubmit() {
+  function handleSubmit(e) {
+    for (const info of jsonInfos) {
+      if (info.unity_id === unity && info.date === date) {
+        notify("Essa unidade ja possui geracao para essa data!", "error");
+        e.preventDefault();
+        return;
+      }
+    }
     axios.post("http://localhost:3333/geracoes", {
       unity_id: unity,
       date: date,
@@ -38,19 +45,6 @@ function Consumption() {
     } catch (err) {
       notify("error", "Erro ao cadastrar geracao!");
     }
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-
-    for (const info of jsonInfos) {
-      if (info.unity_id === unity && info.date === date) {
-        notify("Essa unidade ja possui geracao para essa data!", "error");
-        return;
-      }
-    }
-
-    handleSubmit();
   }
 
   useEffect(() => {

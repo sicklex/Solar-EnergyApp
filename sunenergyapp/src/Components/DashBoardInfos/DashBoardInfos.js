@@ -34,9 +34,14 @@ function DashBoardInfos({}) {
       await axios.get(" http://localhost:3333/geracoes").then(response => {
         let sumKw = 0;
         response.data.forEach(item => {
+          console.log(item.kw);
           sumKw += parseInt(item.kw);
         });
-        setAverageKw((sumKw / response.data.length).toFixed(2));
+        if (sumKw === 0) {
+          setAverageKw("0");
+        } else {
+          setAverageKw((sumKw / unitsActive.length).toFixed(0));
+        }
       });
     }
     handleAverageEnergy();
@@ -44,6 +49,7 @@ function DashBoardInfos({}) {
 
   return (
     <InfoContainer>
+      {console.log(unitsActive.length)}
       <div>
         <p>Total Unidades</p>
         <span>{totalUnits}</span>
@@ -58,7 +64,7 @@ function DashBoardInfos({}) {
       </div>
       <div>
         <p>Média de energia</p>
-        <span>{averageKw + " kw "}</span>
+        <span>{averageKw + " Kw"}</span>
       </div>
     </InfoContainer>
   );

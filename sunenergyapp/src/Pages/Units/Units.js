@@ -35,10 +35,8 @@ function Units() {
 
   function HandleRemoveButton(e) {
     e.preventDefault();
-
     axios.get(`http://localhost:3333/geracoes/`).then(response => {
       const data = response.data;
-
       let filteredData = data.filter(unit => unit.unity_id === e.target.id);
       filteredData.map(unit => {
         axios.delete(`http://localhost:3333/geracoes/${unit.id}`);
