@@ -34,7 +34,6 @@ function DashBoardInfos({}) {
       await axios.get(" http://localhost:3333/geracoes").then(response => {
         let sumKw = 0;
         response.data.forEach(item => {
-          console.log(item.kw);
           sumKw += parseInt(item.kw);
         });
         if (sumKw === 0) {
