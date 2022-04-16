@@ -55,6 +55,7 @@ function DashBoard() {
     async function handleGetDashBoardInfos() {
       await axios.get(" http://localhost:3333/geracoes").then(response => {
         response.data.reduce((accumulator, currentValue) => {
+          // Return the accumulator if the currentValue is not in the accumulator
           if (accumulator[currentValue.date]) {
             accumulator[currentValue.date] += parseInt(currentValue.kw);
           } else {

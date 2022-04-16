@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://i.ibb.co/1bXHrjJ/logo1.png" alt="SolarEnergy logo"
+<img src="https://i.ibb.co/PFL08zc/logo2.png" alt="SolarEnergy logo"
     style="width:500px;height:500px;"  >
 
 > </img>
@@ -16,6 +16,10 @@
 
 <p>
     Application prototype created for monthly energy management for companies, with the aim of reducing the cost of energy using solar panels.
+</p>
+
+<p align="center">
+  <img width ="700" src="sunenergyapp/src/Assets/2022-04-16%2018-47-19%20(1).gif">
 </p>
 
 # Project Status

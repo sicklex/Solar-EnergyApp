@@ -38,7 +38,6 @@ function ConsumerUnits() {
         alert("Erro ao cadastrar consumo");
       }
     }
-
     navigate("/units");
   }
 

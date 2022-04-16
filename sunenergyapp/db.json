@@ -1,4 +1,20 @@
 {
-  "geracoes": [],
-  "unidades": []
+  "geracoes": [
+    {
+      "unity_id": "1",
+      "date": "2022-02",
+      "kw": "123",
+      "id": 1
+    }
+  ],
+  "unidades": [
+    {
+      "nickname": "2",
+      "address": "2",
+      "brand": "2",
+      "model": "2",
+      "isActive": true,
+      "id": 1
+    }
+  ]
 }
